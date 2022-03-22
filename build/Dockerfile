@@ -35,6 +35,6 @@ ENV BITNAMI_APP_NAME="sonarqube" \
 
 EXPOSE 9000
 
-USER 1001
+USER sonarqube
 ENTRYPOINT [ "/opt/bitnami/scripts/sonarqube/entrypoint.sh" ]
 CMD [ "/opt/bitnami/scripts/sonarqube/run.sh" ]
