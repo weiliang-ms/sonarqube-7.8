@@ -11,6 +11,7 @@ set -x \
     && unzip -q sonarqube.zip \
     && mv sonarqube-$SONAR_VERSION sonarqube \
     && chown -R sonarqube:sonarqube sonarqube \
+    && chmod -R 0644 sonarqube \
     && rm sonarqube.zip*
 
     # todo verify
