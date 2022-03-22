@@ -63,5 +63,5 @@ set -eux; \
 	ldconfig; \
 	\
 # basic smoke test
-	javac -version; \
+#	javac -version; \
 	java -version
