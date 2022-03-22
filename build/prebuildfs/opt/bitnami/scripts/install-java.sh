@@ -63,7 +63,6 @@ set -eux; \
 	ldconfig; \
 	\
 # basic smoke test
-#	javac -version; \
-  ls /opt/bitnami -R /opt/bitnami;\
   export PATH="/opt/bitnami/java/bin:$PATH";\
+  javac -version; \
 	java -version
