@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: chmod
+        run: find build|grep -e ".sh"|xargs -n1 chmod +x
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
