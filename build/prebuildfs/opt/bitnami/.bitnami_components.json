@@ -6,13 +6,6 @@
         "type": "NAMI",
         "version": "1.14.0-7"
     },
-    "java": {
-        "arch": "amd64",
-        "digest": "900545c4f346a0ece8abf2caf64fd9d4ab7514967d4614d716bf7362b24f828b",
-        "distro": "debian-10",
-        "type": "NAMI",
-        "version": "11.0.14-7"
-    },
     "postgresql-client": {
         "arch": "amd64",
         "digest": "10c4c8870775aa837cc37c243b20cde2efd166482aab0df90974c105884ea210",
