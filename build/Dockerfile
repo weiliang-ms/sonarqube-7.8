@@ -17,14 +17,14 @@ RUN install_packages acl ca-certificates curl gzip libbsd0 libc6 \
     libicu63 libidn2-0 libldap-2.4-2 liblzma5 libnettle6 libp11-kit0 \
     libsasl2-2 libssl1.1 libstdc++6 libtasn1-6 libtinfo6 libunistring2 \
     libuuid1 libxml2 libxslt1.1 procps tar zlib1g \
-    && . /opt/bitnami/scripts/libcomponent.sh \
+RUN . /opt/bitnami/scripts/libcomponent.sh \
     && component_unpack "postgresql-client" "13.6.0-4" \
       --checksum 10c4c8870775aa837cc37c243b20cde2efd166482aab0df90974c105884ea210 \
-    && . /opt/bitnami/scripts/install-java.sh \
-    && . /opt/bitnami/scripts/libcomponent.sh \
+RUN . /opt/bitnami/scripts/install-java.sh \
+RUN . /opt/bitnami/scripts/libcomponent.sh \
     && component_unpack "sonarqube" "8.9.7-4" \
       --checksum 90eb1d5441746681652d851bd46ceaeef9b282deadeb1e59c8642aad212e06f5 \
-    && . /opt/bitnami/scripts/libcomponent.sh \
+RUN . /opt/bitnami/scripts/libcomponent.sh \
     && component_unpack "gosu" "1.14.0-7" \
       --checksum d6280b6f647a62bf6edc74dc8e526bfff63ddd8067dcb8540843f47203d9ccf1 \
     && apt-get update \
