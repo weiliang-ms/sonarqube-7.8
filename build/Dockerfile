@@ -16,9 +16,7 @@ RUN . /opt/bitnami/scripts/libcomponent.sh \
     && component_unpack "postgresql-client" "13.6.0-4" \
       --checksum 10c4c8870775aa837cc37c243b20cde2efd166482aab0df90974c105884ea210
 RUN . /opt/bitnami/scripts/install-java.sh
-RUN . /opt/bitnami/scripts/libcomponent.sh \
-    && component_unpack "sonarqube" "8.9.7-4" \
-      --checksum 90eb1d5441746681652d851bd46ceaeef9b282deadeb1e59c8642aad212e06f5
+RUN . /opt/bitnami/scripts/install-sonar.sh
 RUN . /opt/bitnami/scripts/libcomponent.sh \
     && component_unpack "gosu" "1.14.0-7" \
       --checksum d6280b6f647a62bf6edc74dc8e526bfff63ddd8067dcb8540843f47203d9ccf1 \
