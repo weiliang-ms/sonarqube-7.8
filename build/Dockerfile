@@ -20,8 +20,8 @@ RUN install_packages acl ca-certificates curl gzip libbsd0 libc6 \
 RUN . /opt/bitnami/scripts/libcomponent.sh \
     && component_unpack "postgresql-client" "13.6.0-4" \
       --checksum 10c4c8870775aa837cc37c243b20cde2efd166482aab0df90974c105884ea210
-RUN . /opt/bitnami/scripts/install-java.sh \
-RUN . /opt/bitnami/scripts/libcomponent.sh
+RUN . /opt/bitnami/scripts/install-java.sh
+RUN . /opt/bitnami/scripts/libcomponent.sh \
     && component_unpack "sonarqube" "8.9.7-4" \
       --checksum 90eb1d5441746681652d851bd46ceaeef9b282deadeb1e59c8642aad212e06f5
 RUN . /opt/bitnami/scripts/libcomponent.sh \
@@ -36,7 +36,7 @@ COPY rootfs /
 RUN /opt/bitnami/scripts/java/postunpack.sh
 RUN /opt/bitnami/scripts/sonarqube/postunpack.sh
 ENV BITNAMI_APP_NAME="sonarqube" \
-    BITNAMI_IMAGE_VERSION="8.9.7-debian-10-r40" \
+    BITNAMI_IMAGE_VERSION="7.8-debian-10-r40" \
     JAVA_HOME="/opt/bitnami/java" \
     PATH="/opt/bitnami/postgresql/bin:/opt/bitnami/java/bin:/opt/bitnami/common/bin:$PATH"
 
