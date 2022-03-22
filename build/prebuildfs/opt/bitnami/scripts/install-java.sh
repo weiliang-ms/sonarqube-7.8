@@ -2,7 +2,7 @@
 
 # https://github.com/docker-library/openjdk/blob/a73c475009d29f67e0dfea5dd3c605da79506df8/8/jdk/buster/Dockerfile
 
-JAVA_HOME="/opt/bitnami/java"
+export JAVA_HOME="/opt/bitnami/java"
 
 set -eux; \
 	\
