@@ -9,6 +9,7 @@ set -x \
     && cd /opt/bitnami \
     && curl -o sonarqube.zip -fSL https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-$SONAR_VERSION.zip \
     && curl -o sonarqube.zip.asc -fSL https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-$SONAR_VERSION.zip.asc \
+    && gpg --receive-keys CFCA4A29D26468DE \
     && gpg --batch --verify sonarqube.zip.asc sonarqube.zip \
     && unzip -q sonarqube.zip \
     && mv sonarqube-$SONAR_VERSION sonarqube \
