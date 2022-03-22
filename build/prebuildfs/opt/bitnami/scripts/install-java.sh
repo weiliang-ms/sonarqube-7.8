@@ -64,4 +64,5 @@ set -eux; \
 	\
 # basic smoke test
 #	javac -version; \
+  export PATH="/opt/bitnami/java/bin:$PATH" \
 	java -version
