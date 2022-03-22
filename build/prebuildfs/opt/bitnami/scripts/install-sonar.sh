@@ -3,7 +3,6 @@
 # https://github.com/SonarSource/docker-sonarqube/blob/master/7/community/Dockerfile
 
 export SONAR_VERSION=7.8
-groupadd -r sonarqube && useradd -r -g sonarqube sonarqube
 
 set -x \
     && cd /opt/bitnami \
